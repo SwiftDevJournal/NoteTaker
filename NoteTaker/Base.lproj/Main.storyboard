@@ -695,7 +695,7 @@
                         </connections>
                     </window>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                        <segue destination="SAf-Mx-D8j" kind="relationship" relationship="window.shadowedContentViewController" id="wcp-J6-Xar"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -725,7 +725,7 @@
                 </splitViewController>
                 <customObject id="K7c-Kt-pET" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="47" y="740"/>
+            <point key="canvasLocation" x="69" y="809"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zxD-bG-xRb">
@@ -764,7 +764,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="43" y="672"/>
         </scene>
     </scenes>
 </document>
