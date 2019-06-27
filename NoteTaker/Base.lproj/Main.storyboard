@@ -657,6 +657,20 @@
                                     </items>
                                 </menu>
                             </menuItem>
+                            <menuItem title="Note" id="6YD-BS-1eh" userLabel="Note">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Note" systemMenu="help" id="475-Hh-ucS">
+                                    <items>
+                                        <menuItem title="Add Note" keyEquivalent="n" id="Eax-Es-ePE"/>
+                                        <menuItem title="Delete Note" id="hH5-6M-fLK">
+                                            <string key="keyEquivalent" base64-UTF8="YES">
+CA
+</string>
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
                             <menuItem title="Help" id="wpr-3q-Mcd">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
