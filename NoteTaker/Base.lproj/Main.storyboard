@@ -751,7 +751,7 @@ CA
         <!--Split View Controller-->
         <scene sceneID="sN2-jo-BHD">
             <objects>
-                <splitViewController id="SAf-Mx-D8j" sceneMemberID="viewController">
+                <splitViewController id="SAf-Mx-D8j" customClass="SplitViewController" customModule="NoteTaker" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem id="5VL-Rb-tHn"/>
                         <splitViewItem id="4su-C3-wTZ"/>
