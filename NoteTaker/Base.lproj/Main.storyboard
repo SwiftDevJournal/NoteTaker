@@ -889,6 +889,9 @@ CA
                             </scrollView>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="8GH-rx-YzO" id="6uY-Ag-LMp"/>
+                    </connections>
                 </viewController>
                 <customObject id="FJk-vs-QUB" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
