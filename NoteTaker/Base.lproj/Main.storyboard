@@ -776,7 +776,7 @@ CA
         <!--Table View Controller-->
         <scene sceneID="zxD-bG-xRb">
             <objects>
-                <viewController title="Table View Controller" id="n0Z-9Y-OeV" sceneMemberID="viewController">
+                <viewController title="Table View Controller" id="n0Z-9Y-OeV" customClass="TableViewController" customModule="NoteTaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="SJc-fZ-GuO">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
