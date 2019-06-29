@@ -855,7 +855,7 @@ CA
         <!--Text View Controller-->
         <scene sceneID="AWo-OE-Mzf">
             <objects>
-                <viewController title="Text View Controller" id="QZS-2g-H0B" sceneMemberID="viewController">
+                <viewController title="Text View Controller" id="QZS-2g-H0B" customClass="TextViewController" customModule="NoteTaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="DvU-vw-LQ9">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
