@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct Note {
+    var title: String = ""
+    var contents: NSAttributedString = NSAttributedString(string: "")
+}
