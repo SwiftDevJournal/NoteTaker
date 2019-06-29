@@ -716,6 +716,9 @@ CA
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
+                                    <connections>
+                                        <action selector="addNote:" target="Oky-zY-oP4" id="FMm-4K-CMa"/>
+                                    </connections>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="0885CCF2-39DB-4B5F-A983-984F952575C6" label="Delete Note" paletteLabel="Delete Note" image="NSRemoveTemplate" sizingBehavior="auto" id="YJH-5g-pI8">
                                     <nil key="toolTip"/>
