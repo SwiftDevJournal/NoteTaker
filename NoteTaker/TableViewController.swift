@@ -16,5 +16,14 @@ class TableViewController: NSViewController {
         super.viewDidLoad()
         // Do view setup here.
     }
-    
+ 
+    func tableViewSelectionDidChange(_ aNotification: Notification) {
+        // Get the selected note and change the text view's contents to the selected note.
+        if let splitViewController = parent as? SplitViewController,
+            let textViewController = splitViewController.textViewController {
+            
+            textViewController.changeTextViewContents(selectedRow: tableView.selectedRow)
+        }
+        
+    }
 }
