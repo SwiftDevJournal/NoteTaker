@@ -831,6 +831,10 @@ CA
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="n0Z-9Y-OeV" id="aKL-KB-EJJ"/>
+                                                <outlet property="delegate" destination="n0Z-9Y-OeV" id="G20-RB-ftK"/>
+                                            </connections>
                                         </tableView>
                                     </subviews>
                                     <nil key="backgroundColor"/>
