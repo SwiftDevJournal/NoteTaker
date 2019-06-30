@@ -12,6 +12,7 @@
 		4DEE61E822C70C8C0084E4B9 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE61E722C70C8C0084E4B9 /* TextViewController.swift */; };
 		4DEE61EA22C7E9540084E4B9 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE61E922C7E9540084E4B9 /* SplitViewController.swift */; };
 		4DEE61EC22C7EBE00084E4B9 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE61EB22C7EBE00084E4B9 /* TableViewDataSource.swift */; };
+		4DEE61EE22C8496D0084E4B9 /* TableCellEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE61ED22C8496D0084E4B9 /* TableCellEditing.swift */; };
 		4DFBA51C22C3FB5D0059F845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFBA51B22C3FB5D0059F845 /* AppDelegate.swift */; };
 		4DFBA52022C3FB5E0059F845 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DFBA51F22C3FB5E0059F845 /* Assets.xcassets */; };
 		4DFBA52322C3FB5E0059F845 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DFBA52122C3FB5E0059F845 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		4DEE61E722C70C8C0084E4B9 /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		4DEE61E922C7E9540084E4B9 /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		4DEE61EB22C7EBE00084E4B9 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		4DEE61ED22C8496D0084E4B9 /* TableCellEditing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellEditing.swift; sourceTree = "<group>"; };
 		4DFBA51822C3FB5D0059F845 /* NoteTaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteTaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DFBA51B22C3FB5D0059F845 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DFBA51F22C3FB5E0059F845 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				4DFBA52122C3FB5E0059F845 /* Main.storyboard */,
 				4DEE61E322C70B130084E4B9 /* Note.swift */,
 				4DEE61E922C7E9540084E4B9 /* SplitViewController.swift */,
+				4DEE61ED22C8496D0084E4B9 /* TableCellEditing.swift */,
 				4DEE61E522C70C220084E4B9 /* TableViewController.swift */,
 				4DEE61EB22C7EBE00084E4B9 /* TableViewDataSource.swift */,
 				4DEE61E722C70C8C0084E4B9 /* TextViewController.swift */,
@@ -270,6 +273,7 @@
 				4DEE61EA22C7E9540084E4B9 /* SplitViewController.swift in Sources */,
 				4DFBA51C22C3FB5D0059F845 /* AppDelegate.swift in Sources */,
 				4DEE61E622C70C220084E4B9 /* TableViewController.swift in Sources */,
+				4DEE61EE22C8496D0084E4B9 /* TableCellEditing.swift in Sources */,
 				4DEE61E422C70B130084E4B9 /* Note.swift in Sources */,
 				4DEE61E822C70C8C0084E4B9 /* TextViewController.swift in Sources */,
 			);
