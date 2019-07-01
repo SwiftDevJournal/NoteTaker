@@ -26,4 +26,9 @@ class TableViewController: NSViewController {
         }
         
     }
+    
+    func selectNote(_ position: Int) {
+        let indexSet = IndexSet(integer: position)
+        tableView?.selectRowIndexes(indexSet, byExtendingSelection: false)
+    }
 }
