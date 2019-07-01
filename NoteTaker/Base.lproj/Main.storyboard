@@ -666,6 +666,9 @@
 CA
 </string>
                                             <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="deleteNote:" target="Ady-hI-5gd" id="HsP-vC-iYn"/>
+                                            </connections>
                                         </menuItem>
                                     </items>
                                 </menu>
@@ -729,6 +732,9 @@ CA
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
+                                    <connections>
+                                        <action selector="deleteNote:" target="Oky-zY-oP4" id="RAM-Lc-fVQ"/>
+                                    </connections>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="ZxY-2Q-Z7v"/>
                             </allowedToolbarItems>
