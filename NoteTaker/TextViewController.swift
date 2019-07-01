@@ -39,7 +39,7 @@ class TextViewController: NSViewController, NSTextDelegate {
     func saveTextViewContents() {
         if let splitViewController = parent as? SplitViewController {
             // The note will have the text view's contents.
-            splitViewController.notes[currentNoteLocation].contents = textView.attributedString()
+        splitViewController.notes[currentNoteLocation].contents.setAttributedString(textView.attributedString())
         }
     }
     
