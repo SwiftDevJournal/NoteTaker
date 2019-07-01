@@ -33,9 +33,21 @@ class SplitViewController: NSSplitViewController {
     }
  
     @IBAction func deleteNote(_ sender: AnyObject) {
-        if let removalPoint = tableViewController?.tableView.selectedRow {
-            notes.remove(at: removalPoint)
-            tableViewController?.tableView.reloadData()
+        guard let row = tableViewController?.tableView.selectedRow else {
+            return
         }
+        notes.remove(at: row)
+        tableViewController?.tableView.reloadData()
+        
+        // Select the note that was above the deleted note. Selecting the note that was below the deleted note won't work if the last note is deleted.
+        let newSelectionIndex: Int
+        if row > 0 {
+            newSelectionIndex = row - 1
+        }
+        else {
+            newSelectionIndex = row
+        }
+        tableViewController?.selectNote(newSelectionIndex)
     }
+
 }
