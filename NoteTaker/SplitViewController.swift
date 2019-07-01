@@ -27,7 +27,7 @@ class SplitViewController: NSSplitViewController {
     }
     
     @IBAction func addNote(_ sender: AnyObject) {
-        let newNote = Note(title: "New Note", contents: NSAttributedString(string: ""))
+        let newNote = Note(title: "New Note", contents: NSMutableAttributedString(string: ""))
         notes.append(newNote)
         tableViewController?.tableView.reloadData()
     }
