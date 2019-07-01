@@ -31,5 +31,11 @@ class SplitViewController: NSSplitViewController {
         notes.append(newNote)
         tableViewController?.tableView.reloadData()
     }
-    
+ 
+    @IBAction func deleteNote(_ sender: AnyObject) {
+        if let removalPoint = tableViewController?.tableView.selectedRow {
+            notes.remove(at: removalPoint)
+            tableViewController?.tableView.reloadData()
+        }
+    }
 }
