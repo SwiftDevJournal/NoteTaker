@@ -19,15 +19,15 @@ extension TableViewController: NSTableViewDelegate, NSTableViewDataSource {
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         
-        if let cellView = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "TitleColumn"), owner: self) as? NSTableCellView {
+        guard let cellView = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "TitleColumn"), owner: self) as? NSTableCellView else {
             
-            if let splitViewController = parent as? SplitViewController {
-                cellView.textField?.stringValue = splitViewController.notes[row].title
-            }
+            return nil
+        }
             
-            return cellView
+        if let splitViewController = parent as? SplitViewController {
+            cellView.textField?.stringValue = splitViewController.notes[row].title
         }
         
-        return nil
+        return cellView
     }
 }
