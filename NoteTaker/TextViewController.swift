@@ -28,6 +28,7 @@ class TextViewController: NSViewController, NSTextDelegate {
     }
     
     func changeTextViewContents(selectedRow: Int) {
+        // Using an if-let statement instead of having a computed property for the split view controller that the table view controller has. Using the computed property forced me to do force unwrapping to fill the text view with the selected note's contents. I prefer the if-let statement to force unwrapping.
         if let splitViewController = parent as? SplitViewController {
             let selectedNote = splitViewController.notes[selectedRow]
             // Fill text view with the selected note contents
