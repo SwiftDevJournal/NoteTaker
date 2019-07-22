@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D1A9D0C22E6855300E27102 /* FileSavingandOpening.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A9D0B22E6855300E27102 /* FileSavingandOpening.swift */; };
 		4DEE61E422C70B130084E4B9 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE61E322C70B130084E4B9 /* Note.swift */; };
 		4DEE61E622C70C220084E4B9 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE61E522C70C220084E4B9 /* TableViewController.swift */; };
 		4DEE61E822C70C8C0084E4B9 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE61E722C70C8C0084E4B9 /* TextViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D1A9D0B22E6855300E27102 /* FileSavingandOpening.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSavingandOpening.swift; sourceTree = "<group>"; };
 		4DEE61E322C70B130084E4B9 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		4DEE61E522C70C220084E4B9 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		4DEE61E722C70C8C0084E4B9 /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			children = (
 				4DFBA51B22C3FB5D0059F845 /* AppDelegate.swift */,
 				4DFBA51F22C3FB5E0059F845 /* Assets.xcassets */,
+				4D1A9D0B22E6855300E27102 /* FileSavingandOpening.swift */,
 				4DFBA52422C3FB5E0059F845 /* Info.plist */,
 				4DFBA52122C3FB5E0059F845 /* Main.storyboard */,
 				4DEE61E322C70B130084E4B9 /* Note.swift */,
@@ -269,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D1A9D0C22E6855300E27102 /* FileSavingandOpening.swift in Sources */,
 				4DEE61EC22C7EBE00084E4B9 /* TableViewDataSource.swift in Sources */,
 				4DEE61EA22C7E9540084E4B9 /* SplitViewController.swift in Sources */,
 				4DFBA51C22C3FB5D0059F845 /* AppDelegate.swift in Sources */,
