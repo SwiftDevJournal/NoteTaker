@@ -24,6 +24,8 @@ class SplitViewController: NSSplitViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        loadNotes()
+        tableViewController?.tableView.reloadData()
     }
     
     @IBAction func addNote(_ sender: AnyObject) {
