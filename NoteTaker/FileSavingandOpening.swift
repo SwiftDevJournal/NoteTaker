@@ -10,7 +10,7 @@ import Foundation
 
 extension SplitViewController {
     
-    func saveNotes() {
+    @objc func saveNotes() {
         let wrapper = buildFileWrapper()
         // Get the URL to save the file wrapper
         // Inside the user's Application Support folder
