@@ -17,8 +17,12 @@ struct Note {
         return contents.rtf(from: range)
     }
     
-    mutating func read(data: Data) {
-        if let fileContents = NSAttributedString(rtf: data, documentAttributes: nil) {
+    mutating func read(data: Data?) {
+        guard data != nil else {
+            return
+        }
+        // The guard ensures the data is not nil so I can force unwrap.
+        if let fileContents = NSAttributedString(rtf: data!, documentAttributes: nil) {
             contents = NSMutableAttributedString(attributedString: fileContents)
         }
     }
