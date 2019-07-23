@@ -11,16 +11,40 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-
+    var saveTimer = Timer()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        startTimer()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
+        stopTimer()
+    }
+    
+    func applicationDidBecomeActive(_ notification: Notification) {
+        startTimer()
+    }
+    
+    func applicationDidResignActive(_ notification: Notification) {
+        stopTimer()
     }
 
+    // MARK: Timer functions
+    func startTimer() {
+        // Autosave every 30 seconds.
+        let app = NSApplication.shared
+        if let splitViewContorller = app.windows.first?.contentViewController as? SplitViewController {
+            
+            saveTimer = Timer.scheduledTimer(timeInterval: 30.0, target: splitViewContorller, selector: #selector(SplitViewController.saveNotes), userInfo: nil, repeats: true)
+        }
+        
+    }
+    
+    func stopTimer() {
+        saveTimer.invalidate()
+    }
 
 }
 
