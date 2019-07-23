@@ -7,3 +7,72 @@
 //
 
 import Foundation
+
+extension SplitViewController {
+    
+    func saveNotes() {
+        let wrapper = buildFileWrapper()
+        // Get the URL to save the file wrapper
+        // Inside the user's Application Support folder
+        if let saveLocation = noteFileLocation() {
+            // Write the file wrapper to the URL
+            do {
+                try wrapper.write(to: saveLocation, options: .atomic, originalContentsURL: saveLocation)
+            } catch {
+                print(error)
+            }
+        }
+        
+    }
+    
+    func buildFileWrapper() -> FileWrapper {
+        let mainDirectory = FileWrapper(directoryWithFileWrappers: [:])
+        mainDirectory.preferredFilename = "NoteList"
+        let notesDirectory = FileWrapper(directoryWithFileWrappers: [:])
+        notesDirectory.preferredFilename = "Notes"
+        
+        var index = 0
+        for note in notes {
+            if let noteData = note.write() {
+                let wrapper = FileWrapper(regularFileWithContents: noteData)
+                let filename = buildFilename(note: note, position: index)
+                wrapper.preferredFilename = filename
+                notesDirectory.addFileWrapper(wrapper)
+            }
+            index += 1
+        }
+        
+        mainDirectory.addFileWrapper(notesDirectory)
+        return mainDirectory
+    }
+    
+    func buildFilename(note: Note, position: Int) -> String {
+        var filename: String = ""
+        filename += note.title
+        filename += "-00"
+        filename += String(position)
+        return filename
+    }
+    
+    func noteFileLocation() -> URL? {
+        let fileManager = FileManager.default
+        
+        do {
+            // Could use .localDomainMask if I want to use the machine's Application Support folder.
+            let userApplicationSupportFolder = try fileManager.url(
+                for: .applicationSupportDirectory,
+                in: .userDomainMask, appropriateFor: nil, create: true)
+            let noteFileLocation = userApplicationSupportFolder.appendingPathComponent("NoteTaker")
+            do {
+                // Create a directory to place the notes the first time the app launches.
+                try fileManager.createDirectory(at: noteFileLocation, withIntermediateDirectories: true, attributes: nil)
+            } catch {
+                print("Failed")
+            }
+            return noteFileLocation
+        } catch {
+            print("Failed")
+        }
+        return nil
+    }
+}
