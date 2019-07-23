@@ -31,6 +31,7 @@ class SplitViewController: NSSplitViewController {
     @IBAction func addNote(_ sender: AnyObject) {
         let newNote = Note(title: "New Note", contents: NSMutableAttributedString(string: ""))
         notes.append(newNote)
+        saveNotes()
         tableViewController?.tableView.reloadData()
     }
  
@@ -50,6 +51,7 @@ class SplitViewController: NSSplitViewController {
             newSelectionIndex = row
         }
         tableViewController?.selectNote(newSelectionIndex)
+        saveNotes()
     }
 
 }

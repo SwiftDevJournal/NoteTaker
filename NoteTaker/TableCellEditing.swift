@@ -14,6 +14,7 @@ extension TableViewController: NSControlTextEditingDelegate {
     func control(_ control: NSControl, textShouldEndEditing fieldEditor: NSText) -> Bool {
         let selectedRow = tableView.selectedRow
         splitViewController?.notes[selectedRow].title = fieldEditor.string
+        splitViewController?.saveNotes()
         return true
     }
 }
