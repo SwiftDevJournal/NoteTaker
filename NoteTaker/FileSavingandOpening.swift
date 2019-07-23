@@ -54,6 +54,38 @@ extension SplitViewController {
         return filename
     }
     
+    func loadNotes() {
+        // Find the file wrapper
+        guard let noteLocation = noteFileLocation()  else {
+            return
+        }
+        
+        do {
+            let mainDirectory = try FileWrapper(url: noteLocation, options: .immediate)
+            if let notesDirectory = mainDirectory.fileWrappers?["Notes"],
+                let noteFiles = notesDirectory.fileWrappers {
+                
+                for note in noteFiles {
+                    readNote(noteFile: note.value)
+                }
+            }
+        } catch {
+            print(error)
+        }
+    }
+    
+    func readNote(noteFile: FileWrapper) {
+        if let filename = noteFile.filename {
+            let fileComponents = filename.components(separatedBy: "-00")
+            var newNote = Note(title: "Note", contents: NSMutableAttributedString(string: ""))
+            newNote.title = fileComponents.first ?? "Note"
+            let emptyString = ""
+            newNote.read(data: noteFile.regularFileContents ?? emptyString.data(using: .utf8))
+            notes.append(newNote)
+        }
+        
+    }
+    
     func noteFileLocation() -> URL? {
         let fileManager = FileManager.default
         
