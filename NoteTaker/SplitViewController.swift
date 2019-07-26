@@ -29,13 +29,18 @@ class SplitViewController: NSSplitViewController {
     }
     
     @IBAction func addNote(_ sender: AnyObject) {
+        guard let row = tableViewController?.tableView.selectedRow else {
+            return
+        }
+        
         let newNote = Note(title: "New Note", contents: NSMutableAttributedString(string: ""))
-        notes.append(newNote)
+        // Insert the new note after the selected note.
+        let notePosition = row + 1
+        notes.insert(newNote, at: notePosition)
+        
         saveNotes()
         tableViewController?.tableView.reloadData()
-        
-        let selectionIndex = notes.count - 1
-        tableViewController?.selectNote(selectionIndex)
+        tableViewController?.selectNote(notePosition)
     }
  
     @IBAction func deleteNote(_ sender: AnyObject) {
