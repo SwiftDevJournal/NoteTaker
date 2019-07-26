@@ -39,9 +39,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func startTimer() {
         // Autosave every 30 seconds.
         let app = NSApplication.shared
-        if let splitViewContorller = app.windows.first?.contentViewController as? SplitViewController {
+        if let splitViewController = app.windows.first?.contentViewController as? SplitViewController {
             
-            saveTimer = Timer.scheduledTimer(timeInterval: 30.0, target: splitViewContorller, selector: #selector(SplitViewController.saveNotes), userInfo: nil, repeats: true)
+            saveTimer = Timer.scheduledTimer(timeInterval: 30.0, target: splitViewController, selector: #selector(SplitViewController.saveNotes), userInfo: nil, repeats: true)
         }
         
     }
