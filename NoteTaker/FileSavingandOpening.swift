@@ -27,7 +27,6 @@ extension SplitViewController {
     
     func buildFileWrapper() -> FileWrapper {
         let mainDirectory = FileWrapper(directoryWithFileWrappers: [:])
-        mainDirectory.preferredFilename = "NoteList"
         let notesDirectory = FileWrapper(directoryWithFileWrappers: [:])
         notesDirectory.preferredFilename = "Notes"
         
