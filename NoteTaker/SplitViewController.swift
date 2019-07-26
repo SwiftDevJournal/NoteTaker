@@ -39,6 +39,14 @@ class SplitViewController: NSSplitViewController {
         guard let row = tableViewController?.tableView.selectedRow else {
             return
         }
+        
+        // Register the Delete Note undo action with the undo manager.
+        let noteToDelete = notes[row]
+        undoManager?.registerUndo(withTarget: self, handler: { targetSelf in
+            targetSelf.restoreNote(noteToDelete, location: row)
+        })
+        undoManager?.setActionName("Delete Note")
+        
         notes.remove(at: row)
         tableViewController?.tableView.reloadData()
         
@@ -54,4 +62,18 @@ class SplitViewController: NSSplitViewController {
         saveNotes()
     }
 
+    func restoreNote(_ deletedNote: Note, location: Int) {
+        // Register the redo action with the undo manager.
+        undoManager?.registerUndo(withTarget: self) {targetSelf in
+            targetSelf.deleteNote(self)
+        }
+        undoManager?.setActionName("Delete Note")
+        
+        notes.insert(deletedNote, at: location)
+        tableViewController?.tableView.reloadData()
+        tableViewController?.selectNote(location)
+        saveNotes()
+    }
+    
+    
 }
