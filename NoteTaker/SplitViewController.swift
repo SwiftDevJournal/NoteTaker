@@ -33,6 +33,9 @@ class SplitViewController: NSSplitViewController {
         notes.append(newNote)
         saveNotes()
         tableViewController?.tableView.reloadData()
+        
+        let selectionIndex = notes.count - 1
+        tableViewController?.selectNote(selectionIndex)
     }
  
     @IBAction func deleteNote(_ sender: AnyObject) {
