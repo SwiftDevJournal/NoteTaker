@@ -25,7 +25,14 @@ class SplitViewController: NSSplitViewController {
         super.viewDidLoad()
         // Do view setup here.
         loadNotes()
+        sortNotes()
         tableViewController?.tableView.reloadData()
+    }
+    
+    func sortNotes() {
+        notes.sort {
+            $0.title < $1.title
+        }
     }
     
     @IBAction func addNote(_ sender: AnyObject) {
