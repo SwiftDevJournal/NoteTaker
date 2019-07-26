@@ -31,6 +31,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         stopTimer()
     }
 
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return true
+    }
+    
     // MARK: Timer functions
     func startTimer() {
         // Autosave every 30 seconds.
