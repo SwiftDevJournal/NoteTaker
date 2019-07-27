@@ -79,7 +79,7 @@ class SplitViewController: NSSplitViewController {
 
     func restoreNote(_ deletedNote: Note, location: Int) {
         // Register the redo action with the undo manager.
-        undoManager?.registerUndo(withTarget: self) {targetSelf in
+        undoManager?.registerUndo(withTarget: self) { targetSelf in
             targetSelf.deleteNote(self)
         }
         undoManager?.setActionName("Delete Note")
