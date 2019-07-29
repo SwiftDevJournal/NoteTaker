@@ -78,6 +78,7 @@ extension SplitViewController {
             let fileComponents = filename.components(separatedBy: "-00")
             var newNote = Note(title: "Note", contents: NSMutableAttributedString(string: ""))
             newNote.title = fileComponents.first ?? "Note"
+            // Load an empty string if there's no data to read.
             let emptyString = ""
             newNote.read(data: noteFile.regularFileContents ?? emptyString.data(using: .utf8))
             notes.append(newNote)
