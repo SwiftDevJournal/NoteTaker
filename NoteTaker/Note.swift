@@ -10,11 +10,10 @@ import Foundation
 
 struct Note {
     var title: String = ""
-    var contents: NSMutableAttributedString = NSMutableAttributedString(string: "")
+    var contents: String = ""
     
     func write() -> Data? {
-        let range = NSRange(location: 0, length: contents.length)
-        return contents.rtf(from: range)
+        return contents.data(using: .utf8)
     }
     
     mutating func read(data: Data?) {
@@ -22,8 +21,8 @@ struct Note {
             return
         }
         // The guard ensures the data is not nil so I can force unwrap.
-        if let fileContents = NSAttributedString(rtf: data!, documentAttributes: nil) {
-            contents = NSMutableAttributedString(attributedString: fileContents)
+        if let stringData = String(data: data!, encoding: .utf8) {
+            contents = stringData
         }
     }
 }
