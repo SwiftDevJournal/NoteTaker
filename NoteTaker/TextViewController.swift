@@ -32,7 +32,7 @@ class TextViewController: NSViewController, NSTextDelegate {
         if let splitViewController = parent as? SplitViewController {
             let selectedNote = splitViewController.notes[selectedRow]
             // Fill text view with the selected note contents
-            textView.textStorage?.setAttributedString(selectedNote.contents)
+            textView.string = selectedNote.contents
             currentNoteLocation = selectedRow
         }
     }
@@ -40,7 +40,7 @@ class TextViewController: NSViewController, NSTextDelegate {
     func saveTextViewContents() {
         if let splitViewController = parent as? SplitViewController {
             // The note will have the text view's contents.
-        splitViewController.notes[currentNoteLocation].contents.setAttributedString(textView.attributedString())
+            splitViewController.notes[currentNoteLocation].contents = textView.string
         }
     }
     
