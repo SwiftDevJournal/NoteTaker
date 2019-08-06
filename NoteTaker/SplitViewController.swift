@@ -33,7 +33,7 @@ class SplitViewController: NSSplitViewController {
             return
         }
         
-        let newNote = Note(title: "New Note", contents: NSMutableAttributedString(string: ""))
+        let newNote = Note(title: "New Note", contents: "")
         // Insert the new note after the selected note.
         let notePosition = row + 1
         notes.insert(newNote, at: notePosition)
