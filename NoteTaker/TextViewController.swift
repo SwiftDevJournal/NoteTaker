@@ -17,14 +17,7 @@ class TextViewController: NSViewController, NSTextDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        registerForNotifications()
-    }
-    
-    func registerForNotifications() {
-        let center = NotificationCenter.default
-        center.addObserver(self, selector: #selector(TextViewController.textDidChange(_:)),
-                           name: NSText.didChangeNotification,
-                           object: textView)
+
     }
     
     func changeTextViewContents(selectedRow: Int) {
