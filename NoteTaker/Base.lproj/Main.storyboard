@@ -890,6 +890,9 @@ CA
                                             <size key="minSize" width="435" height="300"/>
                                             <size key="maxSize" width="450" height="10000000"/>
                                             <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="QZS-2g-H0B" id="c7v-8J-Ukp"/>
+                                            </connections>
                                         </textView>
                                     </subviews>
                                 </clipView>
