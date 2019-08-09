@@ -708,39 +708,25 @@ CA
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <toolbar key="toolbar" implicitIdentifier="FDCC0693-5BD3-4540-8385-FACC57C27201" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="TPq-VP-aUg">
                             <allowedToolbarItems>
-                                <toolbarItem implicitItemIdentifier="E6023D9C-0B28-4768-BC2C-8FF884E60913" label="Add Note" paletteLabel="Add Note" image="NSAddTemplate" sizingBehavior="auto" id="ugr-cU-vmz">
-                                    <nil key="toolTip"/>
-                                    <button key="view" verticalHuggingPriority="750" id="zJC-W0-OUI">
-                                        <rect key="frame" x="6" y="14" width="46" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CpN-EV-Mck">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                    </button>
-                                    <connections>
-                                        <action selector="addNote:" target="Oky-zY-oP4" id="FMm-4K-CMa"/>
-                                    </connections>
-                                </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="0885CCF2-39DB-4B5F-A983-984F952575C6" label="Delete Note" paletteLabel="Delete Note" image="NSRemoveTemplate" sizingBehavior="auto" id="YJH-5g-pI8" customClass="ToolbarButton" customModule="NoteTaker" customModuleProvider="target">
-                                    <nil key="toolTip"/>
-                                    <button key="view" verticalHuggingPriority="750" id="alx-F4-cG9">
-                                        <rect key="frame" x="10" y="14" width="50" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hwT-Bs-9Ps">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                    </button>
-                                    <connections>
-                                        <action selector="deleteNote:" target="Oky-zY-oP4" id="RAM-Lc-fVQ"/>
-                                    </connections>
-                                </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="ZxY-2Q-Z7v"/>
+                                <toolbarItem implicitItemIdentifier="B475142D-1C19-45CB-9E7D-D9B259070318" label="Add Note" paletteLabel="Add Note" tag="-1" image="NSAddTemplate" id="zn3-5l-8Oh">
+                                    <size key="minSize" width="11" height="11"/>
+                                    <size key="maxSize" width="11" height="11"/>
+                                    <connections>
+                                        <action selector="addNote:" target="Oky-zY-oP4" id="Lzz-a6-Gu8"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="FD2432B2-44F1-41A4-B45D-B5E576EDFF67" label="Delete Note" paletteLabel="Delete Note" tag="-1" image="NSRemoveTemplate" id="ZeF-uf-kYC">
+                                    <size key="minSize" width="11" height="11"/>
+                                    <size key="maxSize" width="11" height="11"/>
+                                    <connections>
+                                        <action selector="deleteNote:" target="Oky-zY-oP4" id="Mtg-MB-52c"/>
+                                    </connections>
+                                </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
-                                <toolbarItem reference="ugr-cU-vmz"/>
-                                <toolbarItem reference="YJH-5g-pI8"/>
+                                <toolbarItem reference="zn3-5l-8Oh"/>
+                                <toolbarItem reference="ZeF-uf-kYC"/>
                                 <toolbarItem reference="ZxY-2Q-Z7v"/>
                             </defaultToolbarItems>
                         </toolbar>
@@ -754,7 +740,7 @@ CA
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="250"/>
+            <point key="canvasLocation" x="-44" y="337"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="sN2-jo-BHD">
