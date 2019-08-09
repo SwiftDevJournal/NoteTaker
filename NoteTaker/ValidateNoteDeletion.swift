@@ -14,11 +14,8 @@ extension SplitViewController {
     
     override func validateUserInterfaceItem(_ item: NSValidatedUserInterfaceItem) -> Bool {
         switch item.action {
-            
         case #selector(deleteNote(_:))?:
-            // Put your real test here.
             return !(notes.isEmpty)
-            
         default:
             return true
         }
