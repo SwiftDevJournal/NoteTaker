@@ -16,6 +16,7 @@ extension SplitViewController {
         switch item.action {
         case #selector(deleteNote(_:))?:
             return !(notes.isEmpty)
+        // Add any other items you want to validate, such as additional menu items.
         default:
             return true
         }
