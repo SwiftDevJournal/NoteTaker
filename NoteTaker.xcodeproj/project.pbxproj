@@ -20,6 +20,7 @@
 		4DFBA52F22C3FB5F0059F845 /* NoteTakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFBA52E22C3FB5F0059F845 /* NoteTakerTests.swift */; };
 		4DFBA53A22C3FB5F0059F845 /* NoteTakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFBA53922C3FB5F0059F845 /* NoteTakerUITests.swift */; };
 		4DFC89AB22FDFFD4008136E6 /* ValidateNoteDeletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC89AA22FDFFD4008136E6 /* ValidateNoteDeletion.swift */; };
+		4DFC89AD22FE06DC008136E6 /* ToolbarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC89AC22FE06DC008136E6 /* ToolbarButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		4DFBA53922C3FB5F0059F845 /* NoteTakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTakerUITests.swift; sourceTree = "<group>"; };
 		4DFBA53B22C3FB5F0059F845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DFC89AA22FDFFD4008136E6 /* ValidateNoteDeletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateNoteDeletion.swift; sourceTree = "<group>"; };
+		4DFC89AC22FE06DC008136E6 /* ToolbarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				4DEE61E522C70C220084E4B9 /* TableViewController.swift */,
 				4DEE61EB22C7EBE00084E4B9 /* TableViewDataSource.swift */,
 				4DEE61E722C70C8C0084E4B9 /* TextViewController.swift */,
+				4DFC89AC22FE06DC008136E6 /* ToolbarButton.swift */,
 				4DFC89AA22FDFFD4008136E6 /* ValidateNoteDeletion.swift */,
 				4DFBA52522C3FB5E0059F845 /* NoteTaker.entitlements */,
 			);
@@ -281,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D1A9D0C22E6855300E27102 /* FileSavingandOpening.swift in Sources */,
+				4DFC89AD22FE06DC008136E6 /* ToolbarButton.swift in Sources */,
 				4DEE61EC22C7EBE00084E4B9 /* TableViewDataSource.swift in Sources */,
 				4DEE61EA22C7E9540084E4B9 /* SplitViewController.swift in Sources */,
 				4DFBA51C22C3FB5D0059F845 /* AppDelegate.swift in Sources */,
