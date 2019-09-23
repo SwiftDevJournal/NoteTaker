@@ -8,6 +8,7 @@
 
 import Foundation
 
+// I placed the file saving and loading code in a class extension so I could move the code out of the SplitViewController class more easily if the split view controller was doing too much.
 extension SplitViewController {
     
     @objc func saveNotes() {
