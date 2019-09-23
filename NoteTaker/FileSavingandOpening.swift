@@ -76,9 +76,11 @@ extension SplitViewController {
     
     func readNote(noteFile: FileWrapper) {
         if let filename = noteFile.filename {
+            // Get the note title from the file name.
             let fileComponents = filename.components(separatedBy: "-00")
             var newNote = Note(title: "Note", contents: NSMutableAttributedString(string: ""))
             newNote.title = fileComponents.first ?? "Note"
+            // Load the note contents.
             // Load an empty string if there's no data to read.
             let emptyString = ""
             newNote.read(data: noteFile.regularFileContents ?? emptyString.data(using: .utf8))
